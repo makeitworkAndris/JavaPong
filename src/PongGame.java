@@ -14,4 +14,7 @@ public class PongGame extends JPanel{
     public PongGame(){
         gameBall = new Ball(300,200,3,3,10,3,Color.YELLOW);
     }
+    public void gameLogic(){
+        gameBall.moveBall();
+    }
 }

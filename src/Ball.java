@@ -17,4 +17,8 @@ public class Ball {
         g.setColor(color);
         g.fillOval(x,y,size,size);
     }
+    public void moveBall(){
+        x += cx;
+        y += cy;
+    }
 }
