@@ -21,4 +21,28 @@ public class Ball {
         x += cx;
         y += cy;
     }
+    public void bounceOffEdges(int top,int bottom){
+        if(y > bottom){
+            reverseY();
+        }
+        else if(y < top){
+            reverseY();
+        }
+
+        if(x < 0){
+            reverseX();
+        }
+        else if(x > 640){
+            reverseX();
+        }
+
+    }
+    public void reverseX(){
+        cx *= -1;
+    }
+
+
+    public void reverseY(){
+        cy *= -1;
+    }
 }
