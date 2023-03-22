@@ -9,9 +9,9 @@ public class Ball {
         this.y = y;
         this.cx = cx;
         this.cy = cy;
-        this.size = size;
         this.speed = speed;
         this.color = color;
+        this.size = size;
     }
     public void paint(Graphics g){
         g.setColor(color);
@@ -22,7 +22,7 @@ public class Ball {
         y += cy;
     }
     public void bounceOffEdges(int top,int bottom){
-        if(y > bottom){
+        if(y > bottom - size){
             reverseY();
         }
         else if(y < top){
@@ -32,7 +32,7 @@ public class Ball {
         if(x < 0){
             reverseX();
         }
-        else if(x > 640){
+        else if(x > 640 - size){
             reverseX();
         }
 

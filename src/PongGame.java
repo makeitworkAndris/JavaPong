@@ -3,7 +3,7 @@ import java.awt.*;
 
 public class PongGame extends JPanel{
 
-    static final int WINDOW_WIDTH = 640, WINDOW_HEIGHT = 480;
+    static final int WINDOW_WIDTH = 640, WINDOW_HEIGHT = 460;
     public void paintComponent(Graphics g){
         g.setColor(Color.BLACK);
         g.fillRect(0,0,WINDOW_WIDTH,WINDOW_HEIGHT);

@@ -7,7 +7,7 @@ public class Main {
 
     public static void main(String[] args) {
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        frame.setSize(650,495);
+        frame.setSize(656,499);
 
         PongGame game = new PongGame();
         frame.add(game);
