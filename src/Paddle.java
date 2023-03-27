@@ -20,15 +20,15 @@ public class Paddle {
     }
 
     public void moveTowards(int moveToY){
-        int centerY = y + height;
+        int centerY = y + height / 2 ;
 
         if(Math.abs(centerY - moveToY) > speed){
             if(centerY > moveToY){
-                y-=speed;
+                y -= speed;
             }
 
             if(centerY < moveToY){
-                y+=speed;
+                y += speed;
             }
         }
     }
@@ -37,8 +37,8 @@ public class Paddle {
         int rightX = x + PADDLE_WIDTH;
         int bottomY = y + height;
 
-        if(b.getX() > x && b.getX() < rightX){
-            if(b.getY() > y && b.getY() <bottomY){
+        if(b.getX() > (x - b.getSize()) && b.getX() < rightX){
+            if(b.getY() > y && b.getY() < bottomY){
                 return true;
             }
         }
