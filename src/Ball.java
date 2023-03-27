@@ -7,6 +7,9 @@ public class Ball {
     public int getY(){
         return y;
     }
+    public int getX(){
+        return x;
+    }
 
     public Ball (int x, int y, int cx, int cy, int size, int speed, Color color){
         this.x = x;

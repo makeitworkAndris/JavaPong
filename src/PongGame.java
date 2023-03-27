@@ -8,8 +8,8 @@ public class PongGame extends JPanel implements MouseMotionListener {
     static final int WINDOW_WIDTH = 640, WINDOW_HEIGHT = 460;
     private Ball gameBall;
     private Paddle userPaddle,pcPaddle;
-
     private int userMouseY;
+    private int bounceCount;
 
 
     public void paintComponent(Graphics g){
@@ -38,6 +38,13 @@ public class PongGame extends JPanel implements MouseMotionListener {
 
         userPaddle.moveTowards(userMouseY);
         pcPaddle.moveTowards(gameBall.getY());
+
+        if(pcPaddle.checkCollision(gameBall) || userPaddle.checkCollision(gameBall)){
+            //reverse ball if they collide
+            gameBall.reverseX();
+            //increase the bounce count
+            bounceCount++;
+        }
     }
 
 
