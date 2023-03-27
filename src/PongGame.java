@@ -69,6 +69,10 @@ public class PongGame extends JPanel implements MouseMotionListener {
             gameBall.reverseX();
             bounceCount++;
         }
+        if(bounceCount == 3){
+            bounceCount = 0;
+            gameBall.increaseSpeed();
+        }
 
         if(gameBall.getX() < 0){
             pcScore++;
