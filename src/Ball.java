@@ -4,6 +4,10 @@ public class Ball {
     private int x,y,cx,cy,size,speed;
     private Color color;
 
+    public int getY(){
+        return y;
+    }
+
     public Ball (int x, int y, int cx, int cy, int size, int speed, Color color){
         this.x = x;
         this.y = y;
@@ -40,8 +44,6 @@ public class Ball {
     public void reverseX(){
         cx *= -1;
     }
-
-
     public void reverseY(){
         cy *= -1;
     }
