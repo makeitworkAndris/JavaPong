@@ -13,8 +13,13 @@ public class Ball {
     public int getSize(){
         return size;
     }
+    public void setX(int x){this.x = x;}
+    public void setY(int y){this.y = y;}
+    public int setCx(int cx){return cx;}
+    public void setCy(int cy){this.cy = cy;}
+    public void setSpeed(int speed){this.speed = speed;}
 
-    public Ball (int x, int y, int cx, int cy, int size, int speed, Color color){
+    public Ball (int x, int y, int cx, int cy, int speed, int size, Color color){
         this.x = x;
         this.y = y;
         this.cx = cx;
@@ -48,4 +53,5 @@ public class Ball {
     public void reverseY(){
         cy *= -1;
     }
+
 }
