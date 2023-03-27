@@ -25,6 +25,8 @@ public class PongGame extends JPanel{
     public void gameLogic(){
         gameBall.moveBall();
         gameBall.bounceOffEdges(0,WINDOW_HEIGHT);
+        userPaddle.moveTowards(0);
+        pcPaddle.moveTowards(600);
     }
 
 

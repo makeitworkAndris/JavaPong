@@ -18,4 +18,19 @@ public class Paddle {
         g.setColor(color);
         g.fillRect(x, y, PADDLE_WIDTH, height);
     }
+
+    public void moveTowards(int moveToY){
+        int centerY = y + height;
+
+        if(Math.abs(centerY - moveToY) > speed){
+            if(centerY > moveToY){
+                y-=speed;
+            }
+
+            if(centerY < moveToY){
+                y+=speed;
+            }
+        }
+    }
+
 }
